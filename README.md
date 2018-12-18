@@ -5,15 +5,15 @@ Basic dating app that utilizes everything covered thus far in Boot camp - coming
 
 # Programming/Scripting Languages
 
-Front-end
+## Front-end ---
 HTML, CSS (Bootstrap)
 Javascript (JQuery)
-Back-end
+## Back-end  ---
 JavaScript (Node.js, v8.11.2)
 npm (v6.4.0) packages: routing (body-parser, express, path), fake data (faker, axios), statistics (node-correlation)
-Features
+## Features ---
 large database of users (albiet fake!)
-returns percent match with friend, their job tite and phnoe number.
+returns percent match with friend, their job tite and phone number.
 
 
 
