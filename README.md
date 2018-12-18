@@ -10,10 +10,9 @@ HTML, CSS (Bootstrap)
 Javascript (JQuery)
 ## Back-end  ---
 JavaScript (Node.js, v8.11.2)
-npm (v6.4.0) packages: routing (body-parser, express, path), fake data (faker, axios), statistics (node-correlation)
+npm (v6.4.0) packages: routing (body-parser, express, path), fake data (faker, axios) - mock data population, statistics (node-correlation)
 ## Features ---
-large database of users (albiet fake!)
-returns percent match with friend, their job tite and phone number.
+
 Deployed utilizing Heroku!.
 Give it a try! 
 https://tranquil-ocean-83967.herokuapp.com/
