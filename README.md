@@ -14,7 +14,9 @@ npm (v6.4.0) packages: routing (body-parser, express, path), fake data (faker, a
 ## Features ---
 large database of users (albiet fake!)
 returns percent match with friend, their job tite and phone number.
-
+Deployed utilizing Heroku!.
+Give it a try! 
+https://tranquil-ocean-83967.herokuapp.com/
 
 
 
