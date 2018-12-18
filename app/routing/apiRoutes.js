@@ -31,4 +31,4 @@ function findFriend(user, db) {
   match = db[cors.indexOf(Math.max(...cors))]
   match.cor = Math.max(...cors)
   return match
-}
+};

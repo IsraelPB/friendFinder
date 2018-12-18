@@ -1,5 +1,5 @@
 {
-  "name": "FriendFinder",
+  "name": "friendFinder",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IsraelPB/FriendFinder.git"
+    "url": "git+https://github.com/IsraelPB/friendFinder.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IsraelPB/FriendFinder/issues"
+    "url": "https://github.com/IsraelPB/friendFinder/issues"
   },
-  "homepage": "https://github.com/IsraelPB/FriendFinder#readme",
+  "homepage": "https://github.com/IsraelPB/friendFinder#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",

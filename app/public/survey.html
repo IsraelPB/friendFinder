@@ -17,11 +17,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    h1,h2,h3,h4,h5,h6,p,a {color: rgb(255, 255, 255)}
+  
+    </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="container" style= "background-color: rgb(66,103,178)">
 
     <h2>Survey Questions</h2>
     <hr>
@@ -31,16 +35,17 @@
       <h6>Note: All fields are required*</h6>
     </h3>
     <h4>Name</h4>
-    <input type="text" id="name" class="form-control" required>
+    <input type="text" id="name" class="form-control" placeholder="Required">
     <h4>Occupation</h4>
-    <input type="text" id="jobTitle" class="form-control" required>
+    <input type="text" id="jobTitle" class="form-control" placeholder="Required">
     <h4>Phone Number</h4>
-    <input type="text" id="phoneNumber" class="form-control" required>
+    <input type="text" id="phoneNumber" class="form-control" placeholder="Required">
 
     <h4>Link to Photo Image</h4>
-    <input type="text" id="photo" class="form-control" required>
+    <input type="text" id="photo" class="form-control" placeholder="Required">
+    <br>
     
-    <button id="getDogImage" class="btn btn-primary btn-lg">Feeling shy? Randomize from cute dogs! </button>
+    <button id="getDogImage" class="btn btn-primary btn-lg">Feeling shy? Randomize a dog Pic! </button>
     <hr>
 
     <h3>
@@ -73,7 +78,7 @@
     <h3>
       <strong>Question 3</strong>
     </h3>
-    <h4>You find confort in solitude rather than being in large groups of people</h4>
+    <h4>You find comfort in solitude, rather than being in large groups of people.</h4>
     <select class="chosen-select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -87,7 +92,7 @@
     <h3>
       <strong>Question 4</strong>
     </h3>
-    <h4>You rarely act out of sheer anger rather than thought</h4>
+    <h4>You rarely act out of sheer anger, rather than thought.</h4>
     <select class="chosen-select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -101,7 +106,7 @@
     <h3>
       <strong>Question 5</strong>
     </h3>
-    <h4>People can rarely upset you.</h4>
+    <h4>You find it difficult to deal with people.</h4>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -190,8 +195,8 @@
     <footer class="footer">
       <div class="container">
         <p>
-          <a href="/api/friends">API Friends List</a> |
-          <a href="https://github.com/singha53/FriendFinder">GitHub Repo</a>
+          <a href="/api/friends"target="null">API Friends List</a> |
+          <a href="https://github.com/IsraelPB/friendFinder"target="null">GitHub Repo</a>
         </p>
       </div>
     </footer>
@@ -204,18 +209,18 @@
 
       <!-- Modal content-->
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header"style="background-color:cornflowerblue">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">
+          <h2 class="modal-title" style="text-align:center" >
             <strong>Best Match</strong>
           </h2>
         </div>
-        <div class="modal-body">
-          <img id="match-img" style="width:50%;" src="" alt="">
-          <h2 id="match-name"></h2>
+        <div class="modal-body" >
+          <img id="match-img" style="width:50%;" src="" alt="" >
+          <h2 id="match-name" style="color:rgb(0, 0, 0)"></h2>
           <div id="match-chart" style="width:500px;height:350px;"></div>
         </div>
-        <div class=" modal-footer ">
+        <div class=" modal-footer"style="background-color:cornflowerblue">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -224,7 +229,7 @@
   </div>
 
   <script type="text/javascript ">
-    $('#getDogImage').on('click', function(e){
+    $('#getDogImage').on('click', function(d){
       
       $.ajax({
         url: 'https://dog.ceo/api/breeds/image/random',
@@ -287,7 +292,7 @@
             $.post("/api/friends", userData, function (data) {
 
           //Grab the result from the AJAX post so that the best match 's name and photo are displayed.
-          $("#match-name").text(`Your have a ${Math.round(100*data.cor)}% match with ${data.name}, a ${data.jobTitle}. Phone: ${data.phoneNumber}`);
+          $("#match-name").text(`You have a ${Math.round(100*data.cor)}% match with ${data.name}.\n their occupation is ${data.jobTitle}.\n Phone: ${data.phoneNumber}`);
 
           $("#match-img").attr("src", data.photo);
 
@@ -334,7 +339,7 @@
 
         });
       } else {
-        alert("Please fill out all fields before submitting Yo!");
+        alert("Please fill everything before submitting!");
       }
     });
   </script>
